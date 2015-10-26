@@ -32,7 +32,9 @@
 
 	function calculer() 
 	{
-		densite.resultat.textContent = (densite.nbreParasite.value * densite.nbreGloBlancSang.value) / densite.nbreGlobuleBlanc.value;
+		var resultat = (densite.nbreParasite.value * densite.nbreGloBlancSang.value) / densite.nbreGlobuleBlanc.value;
+		
+		densite.resultat.textContent = Math.round(resultat);
  	}
 
 	/*
