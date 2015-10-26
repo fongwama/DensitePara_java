@@ -20,10 +20,10 @@ public class Metier  {
 	 * @param densite
 	 * @return
 	 */
-	public static int  calculer(Densite densite) {
+	public static long  calculer(Densite densite) {
 		
 		/** Retourne la densité**/
-		return (densite.getNombreParasite()*densite.getNombreLeucocite())/densite.getNombreGlobuleBlanc();
+		 return (long)Math.round((float)(densite.getNombreParasite()*densite.getNombreGloSang())/densite.getNombreGlobuleBlanc());
 	}
 
 }

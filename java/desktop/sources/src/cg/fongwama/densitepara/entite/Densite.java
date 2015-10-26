@@ -8,48 +8,57 @@ package cg.fongwama.densitepara.entite;
  * 
  * @Created 06/07/2015
  * 
- * @Description  Cette classe encapsule les informations nÃ©cessaires pour le calcul de
- * la densitÃ© parsitaire.
+ * @Description  Cette classe encapsule les informations nécessaires pour le calcul de
+ * la densité parsitaire.
  */
 
-public class Densite {
+public class Densite
+{
 
-	// dÃ©claration des variables
-
-	/**
-	 * ReprÃ©sente le nombre de paracite  P
-	 */
-	private int nombreParasite;
-
+	// déclaration des variables
 
 	/**
-	 * ReprÃ©sente le nombre de globules blanc GB
+	 * Représente le nombre de paracite  P
 	 */
-	private int nombreGlobuleBlanc;
+	private long nombreParasite;
 
 
 	/**
-	 * ReprÃ©sente le nombre de leucocyte L
+	 * Représente le nombre de globules blanc GB
 	 */
-	private int nombreLeucocite;
+	private long nombreGlobuleBlanc;
+
+
+	/**
+	 * le nombre de globules blancs /µ litre de sang
+	 */
+	
+	private long nombreGloSang;
 
 
 	/**
 	 * ReprÃ©sente la densitÃ©
-	 * D ===> D=P*L/GB
+	 * D ===> densité = parasite * g/µL / globules blancs
 	 */
-	private int densite;
-
+	
+	private long densite;
+	
+	
+	/**
+	 * échantillon permettant d'indentifier le propriétaire de la densite parasitaire calculée.
+	 */
+	
+	private String echantillon;
 
 
 	//le constructeur paramÃ©trer
 
-	public Densite(int nombreParasite, int nombreGlobuleBlanc,
-			int nombreLeucocite, int densite) {
+	public Densite(long nombreParasite, long nombreGlobuleBlanc,
+			long nombreLeucocite, long densite) {
 		super();
 		this.nombreParasite = nombreParasite;
 		this.nombreGlobuleBlanc = nombreGlobuleBlanc;
-		this.nombreLeucocite = nombreLeucocite;
+		this.nombreGloSang = nombreLeucocite;
 		this.densite = densite;
 	}
 
@@ -61,51 +70,54 @@ public class Densite {
 		// TODO Auto-generated constructor stub
 	}
 
-	
-	
 	// les getters et setters
-
-	public int getNombreParasite() {
+	
+	public long getNombreParasite() {
 		return nombreParasite;
 	}
 
-	public void setNombreParasite(int nombreParasite) {
+
+	public void setNombreParasite(long nombreParasite) {
 		this.nombreParasite = nombreParasite;
 	}
 
-	public int getNombreGlobuleBlanc() {
+
+	public long getNombreGlobuleBlanc() {
 		return nombreGlobuleBlanc;
 	}
 
-	public void setNombreGlobuleBlanc(int nombreGlobuleBlanc) {
+
+	public void setNombreGlobuleBlanc(long nombreGlobuleBlanc) {
 		this.nombreGlobuleBlanc = nombreGlobuleBlanc;
 	}
 
-	public int getNombreLeucocite() {
-		return nombreLeucocite;
+
+	public long getNombreGloSang() {
+		return nombreGloSang;
 	}
 
-	public void setNombreLeucocite(int nombreLeucocite) {
-		this.nombreLeucocite = nombreLeucocite;
+
+	public void setNombreGloSang(long nombreGloSang) {
+		this.nombreGloSang = nombreGloSang;
 	}
 
-	public int getDensite() {
+
+	public long getDensite() {
 		return densite;
 	}
 
-	public void setDensite(int densite) {
+
+	public void setDensite(long densite) {
 		this.densite = densite;
 	}
 
-	// La mÃ©thode toString()
-	@Override
-	public String toString() {
-		return "Densite [nombreParasite=" + nombreParasite
-				+ ", nombreGlobuleBlanc=" + nombreGlobuleBlanc
-				+ ", nombreLeucocite=" + nombreLeucocite + ", densite="
-				+ densite + "]";
+
+	public String getEchantillon() {
+		return echantillon;
 	}
 
 
-
+	public void setEchantillon(String echantillon) {
+		this.echantillon = echantillon;
+	}  
 }

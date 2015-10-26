@@ -1,7 +1,6 @@
 package cg.fongwama.densitepara.ihm;
 
 import java.awt.Color;
-import java.awt.EventQueue;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -18,17 +17,10 @@ public class FlashScreen extends JFrame
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					FlashScreen frame = new FlashScreen();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+	public static void main(String[] args) 
+	{
+		FlashScreen frame = new FlashScreen();
+		frame.setVisible(true);
 	}
 
 	/**
@@ -63,7 +55,7 @@ public class FlashScreen extends JFrame
 		progressBar.setMaximum(100);
 		progressBar.setForeground(new Color(231, 48, 42));
 		
-		Demarrer demarrer = new Demarrer(progressBar, this);
+		ThreadProgression demarrer = new ThreadProgression(progressBar, this);
 		demarrer.start();
 	}
 }

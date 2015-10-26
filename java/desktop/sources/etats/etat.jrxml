@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="etat" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="nombreParasite" class="java.lang.Long"/>
+	<field name="nombreGlobuleBlanc" class="java.lang.Long"/>
+	<field name="nombreGloSang" class="java.lang.Long"/>
+	<field name="densite" class="java.lang.Long"/>
+	<field name="echantillon" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="180" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-21" y="-22" width="597" height="68" backcolor="#254061"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="32" y="-6" width="139" height="30" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="Arial" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fongwama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="73" width="321" height="30" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="26" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Etat de calcul de la  densité parasitaire]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="131" width="128" height="30" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="22" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Echantillon :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="144" width="129" height="30" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="22" isBold="false"/>
+				</textElement>
+				<text><![CDATA[----------------]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="157" y="135" width="280" height="30"/>
+				<textElement>
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{echantillon}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="389" splitType="Stretch">
+			<frame>
+				<reportElement x="31" y="16" width="498" height="148"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+			</frame>
+			<staticText>
+				<reportElement x="48" y="28" width="213" height="30" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="20" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nombre de parasites]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="75" width="237" height="30" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="20" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nombre de globules blanc]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="123" width="353" height="30" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="20" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nombre de globules blancs/µL de sang]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="31" y="164" width="498" height="63"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement x="272" y="13" width="222" height="26"/>
+					<textElement>
+						<font fontName="Arial" size="20"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Long"><![CDATA[$F{densite}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="401" y="16" width="128" height="148"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+			</frame>
+			<textField isBlankWhenNull="true">
+				<reportElement x="411" y="76" width="222" height="30"/>
+				<textElement>
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$F{nombreGlobuleBlanc}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="411" y="28" width="202" height="25"/>
+				<textElement>
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$F{nombreParasite}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="411" y="124" width="222" height="26"/>
+				<textElement>
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$F{nombreGloSang}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="48" y="176" width="182" height="30" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Densité parasitaire]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="33" y="0" width="149" height="26"/>
+				<textElement>
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH.mm.ss">
+				<reportElement x="182" y="0" width="180" height="26"/>
+				<textElement>
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

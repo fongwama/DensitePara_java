@@ -56,7 +56,7 @@ public class Guide extends JDialog
 	{
 		setTitle("Aide - DensitePara");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Guide.class.getResource("/img/logo.png")));
-		setBounds(100, 100, 581, 351);
+		setBounds(100, 100, 348, 395);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBackground(Color.WHITE);
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -65,8 +65,8 @@ public class Guide extends JDialog
 		
 		JEditorPane dtrpnCeDocumentEst = new JEditorPane();
 		dtrpnCeDocumentEst.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		dtrpnCeDocumentEst.setText("Ce document est r\u00E9dig\u00E9 dans le but de faciliter le calcul de la desnit\u00E9 parasitaire d'un individu. \r\n\r\nAper\u00E7u\r\nDensitePara est une application qui permet de calculer la densit\u00E9 parasitaire d\u2019un individu.\r\nPour arriver au r\u00E9sultat, l\u2019utilisateur doit fournir au programme un nombre de param\u00E8tres.\r\nCe calcul s\u2019effectue en deux \u00E9tapes.\r\n\r\nEtape 1 : rentrer le nombre de parasites et de globules blancs.\r\nEtape 2 : lancer le calcul en cliquant sur le bouton \u00AB Calculer \u00BB et observer le \u00AB R\u00E9sultat \u00BB \r\nsur le c\u00F4t\u00E9 droit de l\u2019\u00E9cran\r\n\r\nSavoir plus :\r\nIl faut noter qu\u2019il est possible de modifier le nombre de leucocyte par microlitre de sang en\r\ncliquant sur le bouton \u00AB Editer \u00BB.");
-		dtrpnCeDocumentEst.setBounds(21, 56, 537, 246);
+		dtrpnCeDocumentEst.setText("Ce document est r\u00E9dig\u00E9 dans le but de faciliter le calculde la desnit\u00E9 parasitaire d'un individu. \r\n\r\nAper\u00E7u\r\nDensitePara est une application qui permet de calculer \r\nla densit\u00E9 parasitaire d\u2019un individu.\r\nPour arriver au r\u00E9sultat, l\u2019utilisateur doit fournir au \r\nprogramme un nombre de param\u00E8tres.\r\nCe calcul s\u2019effectue en deux \u00E9tapes.\r\n\r\nEtape 1 : rentrer le nombre de parasites et de globules blancs.\r\nEtape 2 : lancer le calcul en cliquant sur le bouton \r\n\u00AB Calculer \u00BB et observer le \u00AB R\u00E9sultat \u00BB \r\nsur le c\u00F4t\u00E9 droit de l\u2019\u00E9cran\r\n\r\nSavoir plus :\r\nIl faut noter qu\u2019il est possible de modifier le nombre de globule blanc par microlitre de sang en\r\ncliquant sur le bouton \u00AB Editer \u00BB.");
+		dtrpnCeDocumentEst.setBounds(10, 11, 311, 326);
 		contentPanel.add(dtrpnCeDocumentEst);
 	}
 }

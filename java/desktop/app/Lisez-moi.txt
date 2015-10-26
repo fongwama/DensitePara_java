@@ -1,0 +1,14 @@
+
+Recommandation pour l'exportation en PDF 
+
+
+
+Pour des raisons d'exportation du fichier PDF
+il est important d'avoir le dossier etats pour pouvoir bien exporter votre etat en PDF 
+au cas contraire un message vous serez afficher pour vous demander ce dossier.
+
+
+Prierre de veuillez a ce que le dossier soit au même emplacement que le binaire.
+
+
+Merci bien

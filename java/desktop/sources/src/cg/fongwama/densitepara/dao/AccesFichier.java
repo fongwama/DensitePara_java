@@ -14,14 +14,14 @@ import java.io.PrintWriter;
  * 
  * @Created 06/07/2015
  * 
- * @Description  Cette classe permet de lire ou modifier la valeur du nombre de leucocytes stockée dans le fichier NombreLeucocyte.txt
+ * @Description  Cette classe permet de lire ou modifier la valeur du nombre de leucocytes stockée dans le fichier config.ini
  * 	sachant que la valeur par défaut est 8000.
  */
 public class AccesFichier
 {
 
 	/**
-	 * cr�er le fichier pour la premi�re utilisation de l'application
+	 * cr�er le fichier pour la premi�re utilisation de l'application
 	 */
 	public static void creerFichier()
 	{
@@ -31,12 +31,12 @@ public class AccesFichier
 			File parent=new File("");
 
 			//fichier contenant nombreLeucocyte.txt
-			File fils=new File(parent.getAbsolutePath()+"/NombreLeucocyte.txt");
+			File fils=new File(parent.getAbsolutePath()+"/densitePara.ini");
 
 			//Test de non-existence du fichier, si le fichier n'existe pas on le crée et on sauvegarde le nombre
 			if(fils.exists() == false)
 			{
-				// Cr�ation du fichier
+				// Cr�ation du fichier
 				fils.createNewFile();
 
 				// Objet de type FileWriter
@@ -62,7 +62,7 @@ public class AccesFichier
 	 * Cette methode permet de sauvegarder le nombre de leucocyte dans le fichier
 	 * @param nombre
 	 */
-	public static void sauvegarderValeur(int nombre)
+	public static void sauvegarderValeur(long nombre)
 	{
 
 		try 
@@ -71,7 +71,7 @@ public class AccesFichier
 			File parent=new File("");
 
 			//Création du fichier NombreLeucocyte.txt
-			File fils=new File(parent.getAbsolutePath()+"/NombreLeucocyte.txt");
+			File fils=new File(parent.getAbsolutePath()+"/densitePara.ini");
 
 			// Objet de type FileWriter
 			FileWriter f=new FileWriter(fils);
@@ -110,10 +110,10 @@ public class AccesFichier
 	 * Cette methode lire le nombre sauvegarde dans un fichier
 	 * @return
 	 */
-	public static int lireValeur()
+	public static long lireValeur()
 	{  
 		//déclaration des variables
-		int valeur=0;
+		long valeur=0;
 
 		// Ligne récupérée lors de la lecture du fichier
 		String ligne = "";
@@ -126,7 +126,7 @@ public class AccesFichier
 
 
 			//création du fichier fils basee sur le parent
-			File fils=new File(parent.getAbsolutePath()+"/NombreLeucocyte.txt");
+			File fils=new File(parent.getAbsolutePath()+"/densitePara.ini");
 
 			//création d'un flux de lecture pour le lire fichier fils
 			BufferedReader fichier=new BufferedReader(new FileReader(fils));

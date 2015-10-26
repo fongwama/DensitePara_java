@@ -28,11 +28,7 @@ import cg.fongwama.densitepara.dao.AccesFichier;
  * @Created 06/07/2015
  * 
  * @Description FenÃªtre d'édition du nombre de leucocytes
- */
-
-
-
-
+ */ 
 
 public class EditerNbrLeuco extends JDialog
 {
@@ -58,7 +54,7 @@ public class EditerNbrLeuco extends JDialog
 				EditerNbrLeuco.class.getResource("/img/logo.png")));
 		setResizable(false);
 		setTitle("Edition du param\u00E8tre");
-		setBounds(100, 100, 307, 200);
+		setBounds(100, 100, 307, 221);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBackground(Color.WHITE);
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -69,17 +65,17 @@ public class EditerNbrLeuco extends JDialog
 
 		lblNombreDeGlobules = new JLabel(
 				"Nombre de globules blancs/\u00B5l de sang");
-		lblNombreDeGlobules.setBounds(34, 16, 242, 28);
+		lblNombreDeGlobules.setBounds(10, 11, 281, 28);
 		lblNombreDeGlobules.setFont(new Font("Tahoma", Font.PLAIN, 14));
 
 		tfNbreLeuco = new JTextField();
 		tfNbreLeuco.setToolTipText("Entrez la nouvelle valeur du nombre de globules blancs/\u00B5l de sang");
-		tfNbreLeuco.setBounds(34, 48, 198, 27);
+		tfNbreLeuco.setBounds(34, 48, 229, 27);
 		tfNbreLeuco.setColumns(10);
 
 		btnValider = new JButton("Valider");
 		btnValider.setBackground(Color.WHITE);
-		btnValider.setBounds(34, 97, 94, 27);
+		btnValider.setBounds(157, 97, 94, 27);
 		btnValider.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
@@ -111,7 +107,7 @@ public class EditerNbrLeuco extends JDialog
 
 		btnAnnuler = new JButton("Annuler");
 		btnAnnuler.setBackground(Color.WHITE);
-		btnAnnuler.setBounds(138, 97, 94, 27);
+		btnAnnuler.setBounds(34, 97, 94, 27);
 
 		btnAnnuler.setFont(new Font("Tahoma", Font.BOLD, 12));
 
@@ -169,7 +165,7 @@ public class EditerNbrLeuco extends JDialog
 			return false;
 		}
 		
-		int Nlc=Integer.valueOf(tfNbreLeuco.getText());
+		long Nlc=Long.valueOf(tfNbreLeuco.getText());
 		
 		if(Nlc <= 0)
 		{
@@ -188,7 +184,7 @@ public class EditerNbrLeuco extends JDialog
 	 */
 	private void valider(DensitePara densitePara)
 	{
-		AccesFichier.sauvegarderValeur(Integer.parseInt(tfNbreLeuco.getText()));
+		AccesFichier.sauvegarderValeur(Long.parseLong(tfNbreLeuco.getText()));
 		DensitePara.NBRE_LEUCOCITE = AccesFichier.lireValeur();
 		
 		densitePara.tfParametre.setText(""+DensitePara.NBRE_LEUCOCITE);

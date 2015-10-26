@@ -46,7 +46,7 @@ public class Apropos extends JDialog {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Apropos.class.getResource("/img/logo.png")));
 		setResizable(false);
 		setTitle("A Propos de DensitePara");
-		setBounds(100, 100, 528, 448);
+		setBounds(100, 100, 350, 599);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBackground(Color.WHITE);
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -55,33 +55,76 @@ public class Apropos extends JDialog {
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.WHITE);
-		panel.setBounds(0, 0, 522, 409);
+		panel.setBounds(0, 0, 344, 569);
 		contentPanel.add(panel);
 		panel.setLayout(null);
 		
 		JEditorPane dtrpnDedfeffefeeefdfeedf = new JEditorPane();
 		dtrpnDedfeffefeeefdfeedf.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		dtrpnDedfeffefeeefdfeedf.setText("DensitePara : logiciel libre et multi-plateforme d'aide au calcul \r\nde la densit\u00E9 parasitaire. \r\nVersion: 1.0.\r\n\r\nMerci \u00E0\u00A0 Pierre Poulain, F\u00E9lix Koukouikila-Koussounda pour \r\nleurs remarques et suggestions.");
+		dtrpnDedfeffefeeefdfeedf.setText("DensitePara : logiciel libre et multi-plateformed'aide au calcul de la densit\u00E9 \r\nparasitaire. \r\n\r\nDensitePara v 1.0");
 		dtrpnDedfeffefeeefdfeedf.setAutoscrolls(false);
 		dtrpnDedfeffefeeefdfeedf.setEditable(false);
-		dtrpnDedfeffefeeefdfeedf.setBounds(141, 37, 371, 110);
+		dtrpnDedfeffefeeefdfeedf.setBounds(114, 27, 219, 81);
 		panel.add(dtrpnDedfeffefeeefdfeedf);
 		
-		JLabel label = new JLabel("");
-		label.setForeground(Color.LIGHT_GRAY);
-		label.setIcon(new ImageIcon(Apropos.class.getResource("/img/logo.png")));
+		JLabel label_DensitePara = new JLabel("");
+		label_DensitePara.setForeground(Color.LIGHT_GRAY);
+		label_DensitePara.setIcon(new ImageIcon(Apropos.class.getResource("/img/logo.png")));
 		
-		label.setBounds(27, 37, 132, 123);
-		panel.add(label);
+		label_DensitePara.setBounds(0, 11, 104, 110);
+		panel.add(label_DensitePara);
 		
 		JEditorPane dtrpnCeProgrammeLibre = new JEditorPane();
 		dtrpnCeProgrammeLibre.setAlignmentY(Component.BOTTOM_ALIGNMENT);
 		dtrpnCeProgrammeLibre.setAlignmentX(Component.RIGHT_ALIGNMENT);
 		dtrpnCeProgrammeLibre.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		dtrpnCeProgrammeLibre.setText("Ce programme libre est distribu\u00E9 selon les termes de la licence GPL (voir ci-dessous).\r\n\r\nDensitePara est d\u00E9velopp\u00E9 \u00E0\u00A0 partir de l'environnement de d\u00E9veloppement libre et \r\nmulti-plateforme Eclipse.\r\n\r\nDensitePara est d\u00E9velopp\u00E9 par la communaut\u00E9 Fongwama. \r\nCr\u00E9dit\u00A0: Prince YOULOU, Delphin BONDONGO, Aristide NDIELE, Tr\u00E9sor NGASSAKI, \r\nBorel BADILA, Yann BANVI, Steve NDENDE.\r\n\r\nThe GNU General Public License (GPL)\r\nVersion 2, June 1991 \r\nCopyright (C) 1989, 1991 Free Software Foundation, Inc.\r\n59 Temple Place, Suite 330, Boston, MA 02111-1307 USA\r\nEveryone is permitted to copy and distribute verbatim copies\r\nof this license document, but changing it is not allowed.");
+		dtrpnCeProgrammeLibre.setText("D\u00E9velopp\u00E9 par la communaut\u00E9 Fongwama. \r\nPrince YOULOU, Delphin BONDONGO, Aristide NDIELE,   Tr\u00E9sor NGASSAKI, Borel BADILA, Yann BANVI, Steve      NDENDE.");
 		dtrpnCeProgrammeLibre.setEditable(false);
-		dtrpnCeProgrammeLibre.setBounds(27, 160, 476, 241);
+		dtrpnCeProgrammeLibre.setBounds(10, 193, 323, 69);
 		panel.add(dtrpnCeProgrammeLibre);
+		
+		JLabel label_fongwama = new JLabel("");
+		label_fongwama.setIcon(new ImageIcon(Apropos.class.getResource("/img/fongwa.jpg")));
+		label_fongwama.setForeground(Color.LIGHT_GRAY);
+		label_fongwama.setBounds(87, 119, 155, 63);
+		panel.add(label_fongwama);
+		
+		JLabel label_FCM = new JLabel("");
+		label_FCM.setIcon(new ImageIcon(Apropos.class.getResource("/img/fcrm.JPG")));
+		label_FCM.setForeground(Color.LIGHT_GRAY);
+		label_FCM.setBounds(114, 298, 104, 100);
+		panel.add(label_FCM);
+		
+		JLabel label_SKEPSOS = new JLabel("");
+		label_SKEPSOS.setIcon(new ImageIcon(Apropos.class.getResource("/img/ecair.JPG")));
+		label_SKEPSOS.setForeground(Color.LIGHT_GRAY);
+		label_SKEPSOS.setBounds(10, 303, 104, 69);
+		panel.add(label_SKEPSOS);
+		
+		JLabel lblNewLabel = new JLabel("Part\u00E9naires");
+		lblNewLabel.setBounds(20, 273, 84, 14);
+		panel.add(lblNewLabel);
+		
+		JEditorPane dtrpnLicenceGplThe = new JEditorPane();
+		dtrpnLicenceGplThe.setBounds(10, 409, 323, 147);
+		panel.add(dtrpnLicenceGplThe);
+		dtrpnLicenceGplThe.setText("Licence : GPL \r\n\r\nThe GNU General Public License (GPL)\r\nVersion 2, June 1991 \r\nCopyright (C) 1989, 1991 Free Software Foundation, Inc.\r\n59 Temple Place, Suite 330, Boston, MA 02111-1307 \r\nUSA Everyone is permitted to copy and distribute \r\nverbatim copies of this license document, but changing it is not allowed.");
+		dtrpnLicenceGplThe.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		dtrpnLicenceGplThe.setEditable(false);
+		dtrpnLicenceGplThe.setAlignmentY(1.0f);
+		dtrpnLicenceGplThe.setAlignmentX(1.0f);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon(Apropos.class.getResource("/img/skepsos.JPG")));
+		label.setForeground(Color.LIGHT_GRAY);
+		label.setBounds(228, 303, 114, 63);
+		panel.add(label);
+		
+		
+		
+		
+		
+		
 
 	}
 }
